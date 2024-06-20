@@ -79,7 +79,7 @@ const SearchDialog = ({ isSearch, setIsSearch }) => {
         </div>
         {/* List of all users  */}
         <div className="flex flex-col">
-          {users.length>0?users?.map((user, index) => {
+          {(users && users?.length>0)?users.map((user, index) => {
             // very important here that tailwind css can not process calculationo inside of the classes that is why i used inline styling
 
             return (
