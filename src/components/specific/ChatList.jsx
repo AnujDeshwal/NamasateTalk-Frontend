@@ -7,7 +7,7 @@ import {
   unSetMobile,
 } from "../../redux/reducers/misc.reducer";
 
-import { REFETCH_CHATS } from "../../../../server/utils/events";
+import { REFETCH_CHATS } from "../../utils/events.js"
 import { setRefetch } from "../../redux/reducers/chat.reducer";
 import { useSocketEvents } from "../../hooks/hooks";
 import { getSocket } from "../../socket";
