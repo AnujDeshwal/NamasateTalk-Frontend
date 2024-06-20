@@ -39,7 +39,7 @@ console.log("newchats",chats)
                 className={` flex  relative h-[6rem]   w-full`}
               >
                 {" "}
-                <Link className="w-full" key={index} to={`${server}/chat/${_id}`}>
+                <Link className="w-full" key={index} to={`/chat/${_id}`}>
                   <ChatItem
                     onClick={() => {
                       dispatch(setNoDrawer());
