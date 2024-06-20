@@ -1,1 +1,1 @@
-export const server = 'https://namaste-talk-backend.vercel.app/'
+export const server = 'https://namaste-talk-backend.vercel.app'
