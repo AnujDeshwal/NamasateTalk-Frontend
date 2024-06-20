@@ -15,7 +15,7 @@ import { useDispatch } from "react-redux";
 import { userNotExists } from "../../redux/reducers/auth.reducer";
 import toast from "react-hot-toast";
 import { getSocket } from "../../socket";
-import { NEW_REQUEST } from "../../../../server/utils/events";
+import { NEW_REQUEST } from "../../utils/events.js"
 import { useSocketEvents } from "../../hooks/hooks";
 import {setMobile,  setMobileAndunSetNoDrawer,  unSetNoDrawer} from "../../redux/reducers/misc.reducer"
 import NewGroup from "../dialog/NewGroup";

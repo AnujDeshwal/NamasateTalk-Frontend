@@ -9,7 +9,7 @@ import { InputComp } from "../styles/StyledComponent";
 import { server } from "../../constants/server";
 import { setRefetch } from "../../redux/reducers/chat.reducer";
 import { getSocket } from "../../socket";
-import { REFETCH_CHATS } from "../../../../server/utils/events";
+import { REFETCH_CHATS } from "../../utils/events.js"
 const NewGroup = ({ isNewGroup, setIsNewGroup }) => {
     const socket = getSocket();
   const [groupName, setGroupName] = useState("");

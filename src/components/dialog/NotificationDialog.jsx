@@ -5,7 +5,7 @@ import axios from "axios";
 import { server } from "../../constants/server";
 import toast from "react-hot-toast";
 import { Button } from "@mui/material";
-import { REFETCH_CHATS } from "../../../../server/utils/events";
+import { REFETCH_CHATS } from "../../utils/events.js"
 import { getSocket } from "../../socket";
 const NotificationDialog = ({isNotification , setIsNotification}) => {
   const socket = getSocket();

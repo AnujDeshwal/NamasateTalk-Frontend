@@ -11,7 +11,7 @@ import AppLayout from "../components/layout/AppLayout";
 import MessageComponent from "../components/shared/MessageComponent";
 import { Navigate, useParams } from "react-router-dom";
 import { getSocket } from "../socket";
-import { NEW_MESSAGE, REFETCH_CHATS } from "../../../server/utils/events";
+import { NEW_MESSAGE, REFETCH_CHATS } from "../utils/events.js"
 import { useDispatch, useSelector } from "react-redux";
 import { useSocketEvents } from "../hooks/hooks";
 import axios from "axios";
