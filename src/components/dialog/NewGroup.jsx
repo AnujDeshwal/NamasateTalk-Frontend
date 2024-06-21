@@ -70,7 +70,7 @@ const NewGroup = ({ isNewGroup, setIsNewGroup }) => {
     axios
       .post(`${server}/chat/createGroup`, { selectedUsers,groupName }, config)
       .then(({ data }) => {
-        // console.log(data.groupId ,data.members)
+        console.log("group created",data.members)
         socket.emit(REFETCH_CHATS ,{members:data.members})
         toast.success("Group created successfully");
       })

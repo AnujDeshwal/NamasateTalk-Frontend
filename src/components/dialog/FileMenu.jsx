@@ -36,7 +36,7 @@ const FileMenu = ({ fileMenuRef = null }) => {
     const formData = new FormData();
     // console.log("before" ,formData)
 
-    // formData.append("chatId", chatId);
+    formData.append("chatId", chatId);
     files.forEach((file) => formData.append("files", file));
     // console.log("after" ,formData)
     const config = {

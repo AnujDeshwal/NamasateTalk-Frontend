@@ -50,6 +50,7 @@ const ChatList = ({ chats = [], chatId }) => {
                     _id={_id}
                     members={members}
                     name={name}
+                    index={index}
                     groupChat={groupChat}
                     creator={creator}
                   />

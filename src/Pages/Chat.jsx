@@ -241,7 +241,7 @@ const Chat = () => {
               </div>
             </div>
           )}
-          {groupChat && creator !== user._id && (
+          {groupChat && (
             <div
               onClick={(e) => handleOpen()}
               className="group flex flex-col justify-center  items-center cursor-pointer  "
@@ -253,7 +253,7 @@ const Chat = () => {
             </div>
           )}
 
-          {groupChat && creator === user._id && (
+          {/* {groupChat && creator === user._id && (
             <div
               onClick={(e) => handleOpenModal()}
               className="group flex flex-col justify-center  items-center cursor-pointer  "
@@ -263,7 +263,7 @@ const Chat = () => {
                 <h1> Manage Group</h1>
               </div>
             </div>
-          )}
+          )} */}
         </div>
         {/* Message Place  */}
         <div
