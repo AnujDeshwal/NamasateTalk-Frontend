@@ -15,7 +15,8 @@ const chatSlice = createSlice({
         state.members = action.payload
        },
        setRefetch:(state)=>{
-        state.refetch=true
+        // always try to give different value to state.refetch so that it would change on each refetch otherwise it will have same value and react will take it same so refetch will not happen 
+        state.refetch=!state.refetch
        },
        setGroupCreator:(state,action)=>{
         state.creator=action.payload;

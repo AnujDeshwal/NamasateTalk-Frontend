@@ -24,7 +24,7 @@ const ChatItem = ({
     // basically when i am in a chat so i am getting it know by the same or sameChat so then i am storing there values in the redux 
     dispatch(saveMembers(members));
     if(groupChat === true)
-    {console.log("chat",groupChat);dispatch(setGroupChat(true))}
+    {dispatch(setGroupChat(true))}
     else dispatch(setGroupChat(false))
   if(creator!=="")
     {dispatch(setGroupCreator(creator))}
@@ -52,7 +52,7 @@ let neededname="";
               return (
                 <div
                   key={index}
-                  className={` bottom-[3.3em] absolute  m-auto rounded-full w-[4em] h-[4em]`}
+                  className={` bottom-[3.3em] absolute border-white border-[2px ]  m-auto rounded-full w-[4em] h-[4em]`}
                   style={{
                     left: `${index + 0.5}rem`,
                     backgroundImage: `url("${data?.avatar?.url}")`,

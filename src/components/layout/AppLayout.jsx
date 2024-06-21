@@ -18,7 +18,7 @@ const AppLayout = () => (WrappedComponent) => {
     useEffect(() => {
       axios
         .get(`${server}/chat/mychats`, { withCredentials: true })
-        .then(({ data }) => {console.log("Myself anuj");setChats(data.chats)})
+        .then(({ data }) => {setChats(data.chats)})
         .catch((err) => console.log(err));
     } , [refetch]);
     return (

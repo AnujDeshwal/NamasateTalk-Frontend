@@ -15,10 +15,10 @@ const ChatList = ({ chats = [], chatId }) => {
   const socket = getSocket();
   const dispatch = useDispatch();
 
-console.log("newchats",chats)
+// console.log("newchats",chats)
   
   const refetchHandler = (chatId)=>{
-    // console.log("refetch")
+    console.log("refetch for chatlist")
     dispatch(setRefetch());
   }
   const handlers ={

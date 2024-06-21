@@ -13,6 +13,7 @@ import ProtectRoute from "./components/auth/ProtectRoute";
 import { SocketProvider } from "./socket";
 import ChatWithKey from "./components/specific/ChatWithKey";
 import Modal from "./components/shared/Modal";
+import NotFound from "./Pages/NotFound";
 const App = () => {
   const user = useSelector((state) => state.auth.user);
   const dispatch = useDispatch();
@@ -57,8 +58,9 @@ const App = () => {
               <ProtectRoute user={!user} redirect="/">
                 <Signup />
               </ProtectRoute>
-            }
+            } 
           ></Route>
+          <Route path="*" element ={<NotFound/>} />
         </Routes>
         <Toaster position="bottom-center" />
       </BrowserRouter>

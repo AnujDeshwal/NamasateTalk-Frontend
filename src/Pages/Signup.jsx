@@ -59,7 +59,14 @@ const Signup = () => {
           }
         )
       })
-      .catch((err) => console.log(err))
+      .catch((err) =>{
+        toast.error(
+         err?.response?.data?.message  || "Something went wrong ",
+          {
+            id:toastId
+          }
+        )
+        })
       .finally(()=>setIsLoading(false))
   };
   const handleFileInputChange = (e) => {

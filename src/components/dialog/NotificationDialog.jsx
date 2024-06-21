@@ -50,9 +50,9 @@ const NotificationDialog = ({isNotification , setIsNotification}) => {
       axios
         .post(`${server}/user/handlerequest`,{request , userId}, config)
         .then(({ data }) => {
-          console.log("chat",data.chat)
+          console.log("chat on freiend request accepet",data.chat)
           if(data.chat)
-         {console.log('members',data.chat.members); socket.emit(REFETCH_CHATS,{members:data?.chat?.members})}
+         {console.log('members on friend request accept',data.chat.members); socket.emit(REFETCH_CHATS,{members:data?.chat?.members})}
           if(data.friendName){ toast.success(`Congrats ,Now you are friend with ${data.friendName}`)}
          
          setRequests(data.allUsers)

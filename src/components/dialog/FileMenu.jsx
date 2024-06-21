@@ -34,11 +34,11 @@ const FileMenu = ({ fileMenuRef = null }) => {
     dispatch(unSetFileMenu());
     const toastId = toast.loading(`Sending ${key}...`);
     const formData = new FormData();
-    console.log("before" ,formData)
+    // console.log("before" ,formData)
 
-    formData.append("chatId", chatId);
+    // formData.append("chatId", chatId);
     files.forEach((file) => formData.append("files", file));
-    console.log("after" ,formData)
+    // console.log("after" ,formData)
     const config = {
         withCredentials: true,
         headers: {

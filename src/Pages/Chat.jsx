@@ -147,7 +147,7 @@ const Chat = () => {
       .post(`${server}/chat/remove`, { chatId }, config)
       .then(({ data }) => {
         toast.success("Friend Removed");
-        // console.log("members",members)
+        console.log("friend removal",members)
         socket.emit(REFETCH_CHATS, {chatId, members: members });
         setIsModalOpen(false);
       })
@@ -211,6 +211,7 @@ const Chat = () => {
   }, [isFileMenu, handleOutSideClick]);
 
   const refetchHandler=(Id)=>{
+    console.log("refetching in the CHat.jsx")
   if(Id===chatId)setRefetch(true);
   }
   const handlers = {

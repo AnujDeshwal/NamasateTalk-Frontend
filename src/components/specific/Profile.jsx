@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Face as FaceIcon,
   AlternateEmail as UserNameIcon,
   CalendarMonth as CalendarIcon,
 } from "@mui/icons-material";
+import moment from "moment";
 const Profile = ({ user }) => {
 // console.log(user.avatar)
+const timeAgo = moment(user?.createdAt).fromNow();
   return (
     <>
       <div className="h-full  flex flex-col justify-start gap-8  w-full p-16 bg-black bg-opacity-80 text-white">
@@ -40,7 +42,7 @@ const Profile = ({ user }) => {
         <div className="flex">
           <CalendarIcon />
           <div className="w-full  flex flex-col gap-[0.6rem]">
-            <h1 className="text-center">2 month ago</h1>
+            <h1 className="text-center">{timeAgo}</h1>
             <h3 className="text-center text-white text-opacity-45 text-sm ">
               Joined
             </h3>
